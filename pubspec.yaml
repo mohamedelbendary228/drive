@@ -46,7 +46,7 @@ dependencies:
   cached_network_image: ^2.1.0+1
   fl_chart: ^0.9.3
   flutter_compass: ^0.3.4
-  permission_handler: ^5.0.0
+  permission_handler: ^5.0.1
 
 dev_dependencies:
   flutter_test:
