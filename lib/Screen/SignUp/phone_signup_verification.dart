@@ -1,12 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_map_booking/Components/custom_flash.dart';
-import 'package:flutter_map_booking/Components/ink_well_custom.dart';
-import 'package:flutter_map_booking/app_router.dart';
-import 'package:flutter_map_booking/theme/style.dart';
-import 'package:flutter_map_booking/utils/prefs.dart';
+import 'package:flutter_taxi_app_driver/Components/custom_flash.dart';
+import 'package:flutter_taxi_app_driver/Components/ink_well_custom.dart';
+import 'package:flutter_taxi_app_driver/theme/style.dart';
+import 'package:flutter_taxi_app_driver/utils/prefs.dart';
 import 'package:pin_code_text_field/pin_code_text_field.dart';
+import '../../app_router.dart';
 
 class PhoneSignUpVerification extends StatefulWidget {
   final String phoneNumber;

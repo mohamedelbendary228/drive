@@ -2,14 +2,17 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_map_booking/Components/circular_progress.dart';
-import 'package:flutter_map_booking/Components/custom_flash.dart';
-import 'package:flutter_map_booking/Components/ink_well_custom.dart';
-import 'package:flutter_map_booking/Screen/SignUp/phone_signup_verification.dart';
-import 'package:flutter_map_booking/app_router.dart';
-import 'package:flutter_map_booking/theme/style.dart';
-import 'package:flutter_map_booking/Components/validations.dart';
-import 'package:flutter_map_booking/utils/prefs.dart';
+import 'package:flutter_taxi_app_driver/Components/circular_progress.dart';
+import 'package:flutter_taxi_app_driver/Components/custom_flash.dart';
+import 'package:flutter_taxi_app_driver/Components/ink_well_custom.dart';
+import 'package:flutter_taxi_app_driver/Components/validations.dart';
+import 'package:flutter_taxi_app_driver/Screen/SignUp/phone_signup_verification.dart';
+import 'package:flutter_taxi_app_driver/providers/login_service.dart';
+import 'package:flutter_taxi_app_driver/theme/style.dart';
+import 'package:flutter_taxi_app_driver/utils/prefs.dart';
+import 'package:provider/provider.dart';
+import '../../app_router.dart';
+
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -55,6 +58,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final myProvider =Provider.of<LoginService>(context);
+
     return Scaffold(
       body: SingleChildScrollView(
         child: InkWellCustom(
@@ -188,8 +193,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                         Align(
                                           alignment: Alignment.center,
                                           child: GestureDetector(
+                           /////////////////////////////////provider///////////////////////////
                                             onTap: () =>
-                                                setState(
+                                               setState(
                                                         () => _isPhone = false),
                                             child: Text(
                                               'Login with Email',
@@ -329,9 +335,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                     Align(
                                       alignment: Alignment.center,
                                       child: GestureDetector(
+                         /////////////////////////////////provider///////////////////////////
                                         onTap: () =>
-                                            setState(
-                                                    () => _isPhone = true),
+                                            setState(() => _isPhone = true),
                                         child: Text(
                                           'Login with Phone',
                                           style: TextStyle(
@@ -458,7 +464,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     title: Text('Email'),
                     trailing: Icon(Icons.keyboard_arrow_right),
                     onTap: () {
-                      Navigator.pop(context);
+                     Navigator.pop(context);
                       Navigator.of(context).pushNamed(AppRoute.signUpScreen);
                     },
                   ),
@@ -502,6 +508,7 @@ class _LoginScreenState extends State<LoginScreen> {
             title: 'Failed',
             message: 'User Not Found',
           );
+          /////////////////////////////////provider///////////////////////////
           setState(() => _isLoading = false);
         } else if (onError.code == 'ERROR_WRONG_PASSWORD') {
           showCustomFlash(
@@ -509,6 +516,7 @@ class _LoginScreenState extends State<LoginScreen> {
             title: 'Failed',
             message: 'Wrong Email or Password',
           );
+          /////////////////////////////////provider///////////////////////////
           setState(() => _isLoading = false);
         } else {
           showCustomFlash(
@@ -516,6 +524,7 @@ class _LoginScreenState extends State<LoginScreen> {
             title: 'Failed',
             message: 'Something went wrong!',
           );
+          /////////////////////////////////provider///////////////////////////
           setState(() => _isLoading = false);
         }
       },
@@ -534,6 +543,7 @@ class _LoginScreenState extends State<LoginScreen> {
           .where('email', isEqualTo: _email.text)
           .getDocuments()
           .then((value) {
+        /////////////////////////////////provider///////////////////////////
         setState(() {
           _isLoading = false;
           _email.text = '';

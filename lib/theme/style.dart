@@ -105,6 +105,7 @@ const Color backgroundColor = const Color(0xffeeeeee);
 const Color whiteColor = const Color(0XFFFFFFFF);
 const Color blackColor = const Color(0XFF242A37);
 const Color greyColor = const Color(0XFFF1F2F6);
+const Color loadingColor = Colors.black;
 const Color greyColor2 = Colors.grey;
 const Color activeColor = const Color(0xFFF44336);
 const Color redColor = const Color(0xFFFF0000);

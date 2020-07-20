@@ -1,10 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_map_booking/Components/circular_progress.dart';
-import 'package:flutter_map_booking/Components/custom_flash.dart';
-import 'package:flutter_map_booking/Components/ink_well_custom.dart';
-import 'package:flutter_map_booking/theme/style.dart';
-import 'package:flutter_map_booking/Components/validations.dart';
+import 'package:flutter_taxi_app_driver/Components/circular_progress.dart';
+import 'package:flutter_taxi_app_driver/Components/custom_flash.dart';
+import 'package:flutter_taxi_app_driver/Components/ink_well_custom.dart';
+import 'package:flutter_taxi_app_driver/Components/validations.dart';
+import 'package:flutter_taxi_app_driver/theme/style.dart';
+
 
 class ForgotPasswordScreen extends StatefulWidget {
   @override

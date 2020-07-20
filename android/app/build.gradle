@@ -38,7 +38,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.anhtu.flutter_taxi_app_driver"
+        applicationId "com.suitefour.driver"
         minSdkVersion 23
         targetSdkVersion 28
         versionCode flutterVersionCode.toInteger()
@@ -68,3 +68,4 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.1.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.2.0'
 }
+apply plugin: 'com.google.gms.google-services'

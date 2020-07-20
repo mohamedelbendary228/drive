@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.anhtu.flutter_taxi_app_driver">
+    package="com.suitefour.driver">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
@@ -25,7 +25,7 @@
                 android:value="AIzaSyBsfQsNU0zO1Yq_8cGuZOSP1XMozEAqtwc" />
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.suitefour.driver.MainActivity"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"

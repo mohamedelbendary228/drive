@@ -1,12 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_map_booking/Components/circular_progress.dart';
-import 'package:flutter_map_booking/Components/custom_flash.dart';
-import 'package:flutter_map_booking/Components/ink_well_custom.dart';
-import 'package:flutter_map_booking/app_router.dart';
-import 'package:flutter_map_booking/theme/style.dart';
-import 'package:flutter_map_booking/Components/validations.dart';
+import 'package:flutter_taxi_app_driver/Components/circular_progress.dart';
+import 'package:flutter_taxi_app_driver/Components/custom_flash.dart';
+import 'package:flutter_taxi_app_driver/Components/ink_well_custom.dart';
+import 'package:flutter_taxi_app_driver/Components/validations.dart';
+import 'package:flutter_taxi_app_driver/theme/style.dart';
+import '../../app_router.dart';
 
 class SignupScreen extends StatefulWidget {
   @override
@@ -302,7 +302,7 @@ class _SignupScreenState extends State<SignupScreen> {
 
   Future _fetchUserDetailsFromFireStore() async {
     try {
-      bool _isError = false;
+   //   bool _isError = false;
       await Firestore.instance
           .collection('users')
           .where('email', isEqualTo: _email.text)
@@ -341,7 +341,7 @@ class _SignupScreenState extends State<SignupScreen> {
         'identityVerified': false,
         'identityImg1': null,
         'identityImg2': null,
-        'userType': 1,
+        'userType': 2,
       });
     } catch (e) {
       debugPrint("[Firestore User Collection Creation] ${e.toString()}");

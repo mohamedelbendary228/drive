@@ -38,7 +38,7 @@ MaterialPageRoute getRoute(RouteSettings settings) {
       );
     case '/signup2':
       return new MyCustomRoute(
-        builder: (_) => new SignUpScreen(),
+        builder: (_) => new SignupScreen(),
         settings: settings,
       );
     case '/login':

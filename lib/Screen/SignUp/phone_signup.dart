@@ -1,9 +1,10 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_map_booking/Components/ink_well_custom.dart';
-import 'package:flutter_map_booking/Screen/SignUp/phone_signup_verification.dart';
-import 'package:flutter_map_booking/theme/style.dart';
-import 'package:flutter_map_booking/Components/validations.dart';
+import 'package:flutter_taxi_app_driver/Components/ink_well_custom.dart';
+import 'package:flutter_taxi_app_driver/Components/validations.dart';
+import 'package:flutter_taxi_app_driver/Screen/SignUp/phone_signup_verification.dart';
+import 'package:flutter_taxi_app_driver/theme/style.dart';
+
 
 class PhoneSignUpScreen extends StatefulWidget {
   @override

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_map_booking/theme/style.dart';
+import 'package:flutter_taxi_app_driver/theme/style.dart';
 
 class CircularProgress extends StatelessWidget {
   @override
