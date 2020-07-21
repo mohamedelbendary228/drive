@@ -8,7 +8,7 @@ import 'package:flutter_taxi_app_driver/Components/validations.dart';
 import 'package:flutter_taxi_app_driver/theme/style.dart';
 import '../../app_router.dart';
 
-class SignupScreen extends StatefulWidget {
+class SignupScreen extends StatefulWidget with ChangeNotifier{
   @override
   _SignupScreenState createState() => _SignupScreenState();
 }

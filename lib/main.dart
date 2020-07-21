@@ -10,7 +10,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-        providers: [ChangeNotifierProvider(create: (_) => LoginService())],
+        providers: [
+          ChangeNotifierProvider(
+              create: (_) => LoginService(),
+          ),
+          ChangeNotifierProvider(
+            create: (_) => SignupScreen(),
+          ),
+          ChangeNotifierProvider(
+            create: (_) => LoginScreen(),
+          ),
+
+        ],
       child: MaterialApp(
         title: 'Taxi App Driver',
         theme: appTheme,

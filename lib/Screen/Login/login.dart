@@ -14,7 +14,7 @@ import 'package:provider/provider.dart';
 import '../../app_router.dart';
 
 
-class LoginScreen extends StatefulWidget {
+class LoginScreen extends StatefulWidget with ChangeNotifier{
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
